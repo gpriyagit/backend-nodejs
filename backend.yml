@@ -4,7 +4,7 @@ metadata:
   name: backend-api
   labels:
     role: backend
-  namespace: three-tier  
+  namespace: three-tier --namespace=three-tier
 spec:
   replicas: 1
   selector:
@@ -41,7 +41,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: backend-service-api
-  namespace: three-tier 
+  namespace: three-tier --names=three-tier
 spec:
   type: NodePort
   ports:
