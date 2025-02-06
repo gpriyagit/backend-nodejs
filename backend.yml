@@ -2,7 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend-api
-  namespace: three-tier
+   run: |
+        kubectl apply -f backend.yml --namespace=three-tier
   labels:
     role: backend
 spec:
@@ -41,7 +42,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: backend-service-api
-  namespace: three-tier
+  run: |
+        kubectl apply -f backend.yml --namespace=three-tier
 spec:
   type: NodePort
   ports:
