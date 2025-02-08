@@ -1,0 +1,7 @@
+- task: KubernetesManifest@0
+  inputs:
+    action: 'deploy'
+    kubernetesServiceConnection: 'your-k8s-connection-name'  # Replace with your service connection name
+    namespace: 'three-tier'  # Ensure this matches the namespace in your manifest
+    manifests: |
+      $(System.DefaultWorkingDirectory)/path/to/your/backend-api.yaml  # Path to your manifest file
