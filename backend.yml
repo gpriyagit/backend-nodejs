@@ -6,7 +6,7 @@ metadata:
     role: backend
   namespace: three-tier  
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       role: backend
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: backend-api
-        image: kubeproject.azurecr.io/perseverance-project:VERSION
+        image: devproject.azurecr.io/perseverance-project:VERSION
         imagePullPolicy: Always
         env:
           - name: DB_CONN_STR
@@ -35,7 +35,7 @@ spec:
         ports:
         - containerPort: 3100
       imagePullSecrets:
-      - name: secretdb
+      - name: acrsecret
 ---
 apiVersion: v1
 kind: Service
@@ -47,6 +47,6 @@ spec:
   ports:
   - port: 8080
     targetPort: 3100
-    nodePort: 30009
+    nodePort: 30008
   selector:
     role: backend
