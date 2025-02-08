@@ -4,7 +4,7 @@ metadata:
   name: backend-api
   labels:
     role: backend
-  namespace: KubernetesManifest@0  
+  namespace: three-tier  
 spec:
   replicas: 2
   selector:
@@ -41,7 +41,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: backend-service-api
-  namespace: KubernetesManifest@0
+  namespace: three-tier
 spec:
   type: NodePort
   ports:
