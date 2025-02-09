@@ -6,7 +6,7 @@ sudo chmod 777 /var/run/docker.sock
 
 
 kubectl create secret docker-registry acr-creds \
-  --docker-server=perseverance01.azurecr.io \
-  --docker-username=perseverance01 \
-  --docker-password=8 \
+  --docker-server=devproject.azurecr.io \
+  --docker-username=devproject \
+  --docker-password=tfYk422ohbpKntgh4duppfh8vrNsBNQj8mu6KovZXh+ACRCwZsvI\
 
