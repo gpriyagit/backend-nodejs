@@ -2,9 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend-api
+  namespace: three-tier
   labels:
     role: backend
-  namespace: three-tier  
 spec:
   replicas: 2
   selector:
@@ -21,7 +21,7 @@ spec:
         imagePullPolicy: Always
         env:
           - name: DB_CONN_STR
-            value: mongodb://mongodb-svc:27017/perseverance?directConnection=true
+            value: mongodb://mongodb-svc:27017/?directConnection=true
           - name: DB_USERNAME
             valueFrom:
               secretKeyRef:
@@ -35,7 +35,7 @@ spec:
         ports:
         - containerPort: 3100
       imagePullSecrets:
-      - name: acrsecret
+      - name: acrsecrets
 ---
 apiVersion: v1
 kind: Service
