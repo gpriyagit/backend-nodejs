@@ -1,8 +1,0 @@
-- task: KubernetesManifest@0
-  inputs:
-    action: 'deploy'
-    kubernetesServiceConnection: 'k8s connection'
-    namespace: 'three-tier'
-    manifests: |
-      /home/amulya/_work/_temp/Deployment_backend-api_1739004616928
-      /home/amulya/_work/_temp/Service_backend-service-api_1739004616929
