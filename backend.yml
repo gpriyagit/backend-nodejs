@@ -21,7 +21,7 @@ spec:
         imagePullPolicy: Always
         env:
           - name: DB_CONN_STR
-            value: mongodb://mongodb-svc:27017/?directConnection=true
+            value: mongodb://mongodb-svc:27017/amulya?directConnection=true
           - name: DB_USERNAME
             valueFrom:
               secretKeyRef:
