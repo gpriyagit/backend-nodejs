@@ -1,5 +1,5 @@
 pool:
-  name: 'pool-agent'
+  name: 'agent-pool'
   
 variables:
   version: 'backend_$(Build.BuildId)'
