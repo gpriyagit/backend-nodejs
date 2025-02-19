@@ -20,7 +20,7 @@ stages:
   - job: build
     displayName: 'Build Docker Image'
     steps:
-    - task: Docker@2
+    - task: Docker-buildx@2
       displayName: 'Build Docker Image'
       inputs:
         containerRegistry: 'docker registry'
