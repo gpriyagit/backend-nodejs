@@ -25,7 +25,7 @@ stages:
       inputs:
         containerRegistry: 'docker registry'
         repository: 'perseverance-project'
-        command: 'build'
+        command: 'buildx build'
         Dockerfile: '**/Dockerfile'
         tags: |
           backend_$(Build.BuildId)
