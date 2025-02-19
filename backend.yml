@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: backend-api
-        image: devprojet.azurecr.io/perseverance-project:VERSION
+        image: devproject.azurecr.io/perseverance-project:VERSION
         imagePullPolicy: Always
         env:
           - name: DB_CONN_STR
